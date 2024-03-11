@@ -1,25 +1,50 @@
+:root {
+    --header-color: blueviolet;
+    --header-text-color: white;
+}
+
 * {
-    background-color:darkgrey;
+    background-color:darkslategrey;
     color:steelblue;
 }
 
 header * {
-    background-color:bisque;
-    text-decoration: double;
+    background-color: var(--header-color);
+    color: white;
 }
 
-header h1 {
-    display: inline-block;
+header {
+    background-color: var(--header-color);
+    text-decoration: double;
+    display: flex;
+    align-items: center;
+}
+
+header > h1 {
+    text-size-adjust: 50px;
+    background-color: var(--header-color);
+    margin-right: auto;
+}
+
+nav {
+    background-color: var(--header-color);
+    margin-left: auto;
 }
 
 nav ul {
+    background-color: var(--header-color);
     display: flex;
-    justify-content: space-between;
-    min-width: 300px;
+    padding: 0 20px;
+    list-style-type: none;
 }
-  
+
+nav li {
+    background-color: var(--header-color);
+    margin-right: 20px;
+}
+
 nav a {
-    color: #b9c6ae;
+    color: white;
     font-weight: bold;
     text-decoration: none;
 }
@@ -34,7 +59,7 @@ nav a {
 }
 
 .about-me aside h2 {
-    rotate: -90degrees;
+    transform: rotate(-90deg);
 }
 
 
@@ -45,4 +70,11 @@ nav a {
 
 .about-me-content {
     flex: 1;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    margin: 20px;
 }
