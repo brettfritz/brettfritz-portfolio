@@ -1,0 +1,48 @@
+* {
+    background-color:darkgrey;
+    color:steelblue;
+}
+
+header * {
+    background-color:bisque;
+    text-decoration: double;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+  
+nav a {
+    color: #b9c6ae;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+}
+
+.about-me aside {
+    margin: 20px;
+}
+
+.about-me aside h2 {
+    rotate: -90degrees;
+}
+
+
+.about-me img {
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+.about-me-content {
+    flex: 1;
+}
