@@ -1,11 +1,6 @@
 :root {
-    --header-color: blueviolet;
+    --header-color: rgb(98, 54, 141);
     --header-text-color: white;
-}
-
-* {
-    background-color:darkslategrey;
-    color:steelblue;
 }
 
 header * {
@@ -20,7 +15,7 @@ header {
     align-items: center;
 }
 
-header > h1 {
+header h1 {
     text-size-adjust: 50px;
     background-color: var(--header-color);
     margin-right: auto;
@@ -50,12 +45,10 @@ nav a {
 }
 
 .about-me {
+    background-color: blueviolet;
+    color: white;
     display: flex;
     align-items: center;
-}
-
-.about-me aside {
-    margin: 20px;
 }
 
 .about-me aside h2 {
@@ -64,7 +57,7 @@ nav a {
 
 
 .about-me img {
-    max-width: 100%;
+    max-width: 200%;
     margin-right: 20px;
 }
 
@@ -73,8 +66,60 @@ nav a {
 }
 
 .portfolio {
+    background-color: rgb(181, 153, 207);
     display: flex;
     flex-wrap: wrap;
     padding: 40px;
-    margin: 20px;
+    justify-content: space-between;
+}
+
+.portfolio aside {
+    background-color: green;
+    flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #ea3939;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 200px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card-content {
+    background-color: blue;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.card-header, .card-body {
+    background-color: transparent;
+    margin: 0;
+    position: center;
+}
+
+.card-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-basis: calc(100%-20px);
+    }
 }
