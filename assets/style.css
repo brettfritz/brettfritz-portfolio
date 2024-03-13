@@ -3,6 +3,10 @@
     --header-text-color: white;
 }
 
+h2 {
+    color: white;
+}
+
 header * {
     background-color: var(--header-color);
     color: white;
@@ -15,10 +19,15 @@ header {
     align-items: center;
 }
 
+img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
 header h1 {
     text-size-adjust: 50px;
     background-color: var(--header-color);
-    margin-right: auto;
+    margin: 20px;
 }
 
 nav {
@@ -44,17 +53,21 @@ nav a {
     text-decoration: none;
 }
 
-.about-me {
+body {
     background-color: blueviolet;
+    background: linear-gradient(to bottom, blueviolet, white);
+}
+
+.about-me {
     color: white;
     display: flex;
     align-items: center;
 }
 
-.about-me aside h2 {
+aside h2 {
     transform: rotate(-90deg);
+    text-align: center;
 }
-
 
 .about-me img {
     max-width: 200%;
@@ -66,22 +79,22 @@ nav a {
 }
 
 .portfolio {
-    background-color: rgb(181, 153, 207);
     display: flex;
     flex-wrap: wrap;
     padding: 40px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.portfolio aside {
-    background-color: green;
+aside {
     flex: 0 0 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
-    background-color: #ea3939;
+    background-color: black;
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
@@ -96,7 +109,7 @@ nav a {
 }
 
 .card-content {
-    background-color: blue;
+    background: linear-gradient(to bottom, grey, transparent);
     padding: 10px;
     position: absolute;
     display: flex;
@@ -114,12 +127,56 @@ nav a {
 .card-img {
     border-radius: 10px;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
 }
 
-@media (max-width: 600px) {
+.card:first-child {
+    flex-grow: 1;
+    margin-right: 20px
+}
+
+main {
+    display: flex;
+}
+
+@media (max-width: 900px) {
     .card {
-        flex-basis: calc(100%-20px);
+        flex-basis: calc(50%-20px);
     }
+}
+
+footer {
+    background-color: var(--header-color);
+    text-decoration: double;
+    display: flex;
+    align-items: center;
+}
+
+footer ul {
+    background-color: var(--header-color);
+    display: flex;
+    padding: 20px;
+    list-style-type: none;
+}
+
+footer li {
+    background-color: var(--header-color);
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    flex: auto;
+}
+
+#contact-me {
+    display: flex;
+    flex: auto;
 }
