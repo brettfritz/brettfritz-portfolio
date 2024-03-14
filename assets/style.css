@@ -93,6 +93,11 @@ aside {
     align-items: center;
 }
 
+.card-container {
+    display: flex;
+    flex-grow: 1;
+}
+
 .card {
     background-color: black;
     padding: 10px;
@@ -101,7 +106,6 @@ aside {
     margin: 10px;
     overflow: hidden;
     flex-grow: 1;
-    flex-basis: 200px;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -132,10 +136,45 @@ aside {
     object-fit: cover;
 }
 
-.card:first-child {
+.pwsg-card {
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
     flex-grow: 1;
-    margin-right: 20px
+    flex-basis: 200px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
+
+.pwsg-card-content {
+    background: linear-gradient(to bottom, grey, transparent);
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.pwsg-card-header, .pwsg-card-body {
+    background-color: transparent;
+    margin: 0;
+    position: center;
+}
+
+.pwsg-card-img {
+    border-radius: 10px;
+    display: flex;
+    object-fit: cover;
+}
+
+
+
 
 main {
     display: flex;
